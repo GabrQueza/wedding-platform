@@ -10,6 +10,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { RsvpForm } from '../components/RsvpForm';
 
 export default function Home() {
@@ -40,6 +41,17 @@ export default function Home() {
           <Text fontSize="2xl" fontWeight="light">
             20 de Dezembro de 2026
           </Text>
+          <Button 
+            as={Link} 
+            href="/presentes" 
+            size="lg" 
+            mt={4}
+            colorScheme="yellow"
+            bg="brand.softGold"
+            _hover={{ bg: "brand.roseGold" }}
+          >
+            Lista de Presentes
+          </Button>
         </VStack>
       </Box>
 

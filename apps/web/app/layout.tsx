@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
+import { ChatbotWidget } from '../components/ChatbotWidget';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <ChatbotWidget />
+        </Providers>
       </body>
     </html>
   );

@@ -2,3 +2,8 @@ node_modules
 # NestJS compiled output
 dist/
 /dist
+
+# Environment variables
+.env
+.env.*
+!.env.example

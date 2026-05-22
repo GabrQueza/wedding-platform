@@ -1,6 +1,7 @@
-import { Controller, Get, Post, Body, Patch, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, UseGuards } from '@nestjs/common';
 import { GiftsService } from './gifts.service';
 import { CreateGiftDto } from './dto/create-gift.dto';
+import { AdminGuard } from '../common/guards/admin.guard';
 
 @Controller('gifts')
 export class GiftsController {
@@ -12,6 +13,7 @@ export class GiftsController {
   }
 
   @Post()
+  @UseGuards(AdminGuard)
   create(@Body() createGiftDto: CreateGiftDto) {
     return this.giftsService.create(createGiftDto);
   }

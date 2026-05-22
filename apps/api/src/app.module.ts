@@ -6,6 +6,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { GiftsModule } from './gifts/gifts.module';
 import { RsvpModule } from './rsvp/rsvp.module';
 import { PaymentsModule } from './payments/payments.module';
+import { AiModule } from './ai/ai.module';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { PaymentsModule } from './payments/payments.module';
     PrismaModule, 
     GiftsModule, 
     RsvpModule, 
-    PaymentsModule
+    PaymentsModule, AiModule
   ],
   controllers: [AppController],
   providers: [AppService],

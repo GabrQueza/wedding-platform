@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HeroCarousel } from '../components/HeroCarousel';
 import { RsvpForm } from '../components/RsvpForm';
 
 export default function Home() {
@@ -25,15 +26,7 @@ export default function Home() {
         alignItems="center"
         justifyContent="center"
       >
-        <Box position="absolute" top={0} left={0} w="full" h="full" zIndex={-1}>
-          <Image
-            src="/xus.jpg"
-            alt="Casal"
-            fill
-            style={{ objectFit: 'cover', filter: 'brightness(0.6)' }}
-            priority
-          />
-        </Box>
+        <HeroCarousel />
         <VStack spacing={6} color="white" textAlign="center" zIndex={1}>
           <Heading as="h1" size="4xl" letterSpacing="widest">
             Gabriel & Thaliny
